@@ -1,9 +1,10 @@
 import MainBanner from "@/app/containers/main/MainBanner";
+import Header from "@/app/components/organisms/Header";
 
-export default function Main() {
+export default function MainPage() {
   return (
     <div className={"page"}>
-      <header>header 영역</header>
+      <Header />
       <main className={"flex-1"}>
         <MainBanner />
       </main>

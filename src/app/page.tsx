@@ -17,31 +17,31 @@ function getStatusInfo(status: number) {
 export default function Home() {
   return (
     <div className={"bg-[#2d2d2d] h-full flex justify-center"}>
-      <p>pc만 작업</p>
+      <p className={"text-white"}>pc만 작업</p>
       <div className={"w-[1280px] max-w-[calc(100%-2rem)] mt-[100px]"}>
-        {pages.map((pageItem, pageIndex) => {
-          const { text, color } = getStatusInfo(pageItem.status);
+        {pages.map((page, pageIndex) => {
+          const { color } = getStatusInfo(page.status);
 
           return (
             <Link
-              href={pageItem.path}
+              href={page.path}
               key={pageIndex}
               className={`page_item ${color}`}
             >
               <div
                 className={`page_status 
                 ${
-                  pageItem.status === 1
+                  page.status === 1
                     ? "bg-pink-600"
-                    : pageItem.status === 2
+                    : page.status === 2
                     ? "bg-yellow-600"
                     : "bg-green-600"
                 }
     `}
               >
-                {getStatusInfo(pageItem.status).text}
+                {getStatusInfo(page.status).text}
               </div>
-              {pageItem.name}
+              {page.name}
             </Link>
           );
         })}
