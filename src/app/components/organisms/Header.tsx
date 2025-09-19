@@ -7,7 +7,11 @@ import chanel_logo from "@/app/assets/img/chanel_logo.svg";
 
 export default function Header() {
   return (
-    <header className={"flex items-center gap-[20px] h-[50px] mx-[60px]"}>
+    <header
+      className={
+        "flex items-center gap-[20px] h-[50px] px-[60px] w-[var(--common_width)] max-w-full"
+      }
+    >
       <Link href={"/containers/main"}>
         <Image
           src={chanel_logo}

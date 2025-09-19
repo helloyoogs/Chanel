@@ -9,7 +9,7 @@ import banner3 from "@/app/assets/img/banner3.jpg";
 
 export default function MainBanner() {
   return (
-    <div className={"relative"}>
+    <div className={"relative w-[var(--banner_width)] max-w-full"}>
       <Swiper
         modules={[Autoplay, Pagination]}
         spaceBetween={0}

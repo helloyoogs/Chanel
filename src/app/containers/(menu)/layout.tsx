@@ -1,17 +1,14 @@
 "use client";
 
 import Header from "@/app/components/organisms/Header";
+import Footer from "@/app/components/organisms/Footer";
 
-export default function MenuLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function MainPage() {
   return (
     <div className={"page"}>
       <Header />
-      asd
-      {/*<Footer />*/}
+      <main className={"flex-1 w-full"}>asd</main>
+      <Footer />
     </div>
   );
 }
