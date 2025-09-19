@@ -17,6 +17,7 @@ function getStatusInfo(status: number) {
 export default function Home() {
   return (
     <div className={"bg-[#2d2d2d] h-full flex justify-center"}>
+      <p>pc만 작업</p>
       <div className={"w-[1280px] max-w-[calc(100%-2rem)] mt-[100px]"}>
         {pages.map((pageItem, pageIndex) => {
           const { text, color } = getStatusInfo(pageItem.status);
