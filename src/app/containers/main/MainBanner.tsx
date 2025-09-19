@@ -2,6 +2,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, Pagination } from "swiper/modules";
+import Image from "next/image";
+import banner1 from "@/app/assets/img/banner1.png";
+import banner2 from "@/app/assets/img/banner2.png";
+import banner3 from "@/app/assets/img/banner3.jpg";
 
 export default function MainBanner() {
   return (
@@ -20,21 +24,20 @@ export default function MainBanner() {
           el: ".my-pagination",
           clickable: true,
           renderBullet: (_index, className) =>
-            `<span class="${className} cursor-point inline-block w-2 h-2 rounded-full mx-1 bg-white [&.swiper-pagination-bullet-active]:bg-red-600"></span>`,
+            `<span class="${className} cursor-point inline-block bg-black rounded-full w-[14px] h-[14px] [&.swiper-pagination-bullet-active]:rounded-[3px] hover:rounded-[3px] cursor-pointer mx-0"></span>`,
         }}
-        className="h-80 "
         speed={500}
       >
         <SwiperSlide>
-          <div className={"bg-pink-300 h-full"}>1</div>
+          <Image src={banner1} alt={"banner1"} />
         </SwiperSlide>
         <SwiperSlide>
-          <div className={"bg-amber-300 h-full"}>2</div>
+          <Image src={banner2} alt={"banner2"} />
         </SwiperSlide>
         <SwiperSlide>
-          <div className={"bg-sky-300 h-full"}>3</div>
+          <Image src={banner3} alt={"banner3"} />
         </SwiperSlide>
-        <div className="my-pagination absolute z-50 top-1/2 left-1/2 flex justify-center mt-2 "></div>
+        <div className="my-pagination flex justify-center gap-[25px] mt-[60px]"></div>
       </Swiper>
     </div>
   );

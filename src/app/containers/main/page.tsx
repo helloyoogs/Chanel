@@ -1,11 +1,13 @@
+import MainBanner from "@/app/containers/main/MainBanner";
+
 export default function Main() {
-    return (
-        <div className={"page"}>
-            <header>header 입니다</header>
-            <main className={"flex-1"}>
-                main 부분 입니다
-            </main>
-            <footer>footer 입니다</footer>
-        </div>
-    );
+  return (
+    <div className={"page"}>
+      <header>header 영역</header>
+      <main className={"flex-1"}>
+        <MainBanner />
+      </main>
+      <footer>footer 영역</footer>
+    </div>
+  );
 }

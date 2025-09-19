@@ -27,7 +27,7 @@
     }
 
     .page {
-        @apply flex flex-col h-full
+        @apply flex flex-col h-full  w-[1901px] max-w-full mx-auto
     }
 
     * {
