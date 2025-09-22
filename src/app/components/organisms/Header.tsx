@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header
       className={
-        "flex items-center gap-[20px] h-[50px] px-[60px] w-[var(--common_width)] max-w-full"
+        "flex items-center gap-[20px] h-[50px] px-[60px] w-[var(--common_width)] max-w-full flex-none"
       }
     >
       <Link href={"/containers/main"}>
